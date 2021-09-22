@@ -940,7 +940,7 @@ class HTMLReporter(object):
         _screenshot_details = """
             <div class="img-hover col-md-6 col-xl-3 p-3">
               <div>
-                <a class="video" href="__screenshot_base__/pytest_screenshots/__screen_name__.png" data-toggle="lightbox" style="background-image: url('__screenshot_base__/pytest_screenshots/__screen_name__.png');" data-fancybox="images" data-caption="SUITE: __ts__ :: SCENARIO: __tc__">
+                <a class="video" href="pytest_screenshots/__screen_name__.png" data-toggle="lightbox" style="background-image: url('pytest_screenshots/__screen_name__.png');" data-fancybox="images" data-caption="SUITE: __ts__ :: SCENARIO: __tc__">
                     <span class="video-hover-desc video-hover-small"> <span style="font-size:23px;display: block;margin-bottom: 15px;"> __tc__</span>
                     <span>__te__</span> </span>
                 </a>
@@ -964,6 +964,5 @@ class HTMLReporter(object):
         _screenshot_details = _screenshot_details.replace("__ts__", str(test_suite))
         _screenshot_details = _screenshot_details.replace("__tc__", str(test_case))
         _screenshot_details = _screenshot_details.replace("__te__", str(test_error))
-        _screenshot_details = _screenshot_details.replace("__screenshot_base__", str(screen_base))
-
+#chnage made
         _attach_screenshot_details += _screenshot_details
